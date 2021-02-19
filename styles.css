@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  color:white;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body { 
+  display: flex;
+  flex-direction: column;
+}
+
+/* header {
+  width: 100%;
+} */
+
+main {
+  background-color: cadetblue;
+  flex-grow: 1;
+}
+
+/*Navigation Bar*/
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px;
+  align-items: end;
+  justify-items: end;
+}
+
+.navigation-bar {
+    background-color: blue;
+    width: 100%;
+    height: 100px;
+}
+
+.title {
+  /* border: 2px solid red; */
+  margin:0; 
+  display: inline;
+  font-size: 36px;
+  grid-column: 3;
+  /* justify-self: end; */
+}
+
+.title:before {
+  background-image: url('assets/dog.svg');
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+  padding-right: 10px;
+  background-size: 40px 40px;
+  display: inline-block;
+  vertical-align: middle;
+  height:40px;
+  width:40px;
+  content: ""; 
+  filter: invert(100%)
+}
+
+.hamburger {
+  justify-self: start;
+}
+
+/* Card */
+.main-grid {
+  padding: 20px 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  /* align-content: center */
+}
+
+p {
+  color: black;
+}
+
+.site {
+  /* width: 90%; */
+  height:fit-content;
+  min-height: 40px;
+  background: grey;
+  /* margin:0 auto; */
+  border-radius: 5px;
+}
+
+.card {
+  position: relative;
+  max-width: 350px;
+  height: 0;
+  padding-bottom: 140%;
+  background-color: white;
+}
+
+.img-container {
+  border: 2px solid red;
+  position: relative;
+}
+
+.views {
+  position:absolute;
+  top: 0;
+  right:0;
+
+}
+
+.card-info {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* .card:before {
+  content: "";
+  display: block;
+  background-color: white;
+  height: 0;
+  /* width: 0; */
+  /* padding-bottom: calc(3/16 * 100%); */
+/* } */ 
+
+
+/* .profile-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+.profile-pic {
+  /* position: absolute;
+  top:0; */
+  width: 100%;
+}
+
+
+@media screen and (max-width: 500px) {
+  /*nav*/
+
+  .nav-grid {
+    display: grid;
+    grid-template-columns: 40px auto 40px;
+    grid-template-rows: 40px;
+  }
+
+  .navigation-bar {
+    background-color: blue;
+    width: 100%;
+    height: 40px;
+  }
+
+  .hamburger,
+  .profile {
+    height: 30px;
+    width: 30px;
+    background-image: url('assets/hamburger.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-self: center;
+    align-self: center;
+    filter: invert(100%);
+  }
+
+  .profile {
+    background-image: url('assets/profile.svg');
+  }
+  
+  .title {
+    margin: 0;
+    display: inline;
+    grid-column: 2;
+    justify-self: center;
+    align-self: baseline;
+    height:fit-content;
+  }
+
+  /* .title:before {
+    background-image: url('assets/noun_Dog_1065837.svg');
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    background-size: 30px 30px;
+    display: inline-block;
+    font-weight: bold;
+    vertical-align: middle;
+    height:30px;
+    width:30px;
+    content: ""; 
+    filter: invert(100%)
+  } */
+
+  .main-header {
+    margin: 10px 0 0 10px;
+  }
+  
+  .card {
+    height: 100px;
+    background-color: salmon;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+
+  .profile-pic {
+    width: 160px;
+  }
+}
