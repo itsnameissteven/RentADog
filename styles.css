@@ -2,6 +2,7 @@
   margin: 0;
   box-sizing: border-box;
   color:white;
+  font-family: 'Bitter', serif;
 }
 
 html,
@@ -14,38 +15,44 @@ body {
   flex-direction: column;
 }
 
-/* header {
-  width: 100%;
-} */
-
 main {
-  background-color: cadetblue;
+  background-color: #EFEFEF;
   flex-grow: 1;
 }
 
+p {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+.btn {
+  background: transparent;
+  outline: none;
+  border: none;
+}
 /*Navigation Bar*/
 
 .nav-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px;
+  grid-template-rows: 40px auto;
   align-items: end;
   justify-items: end;
 }
 
 .navigation-bar {
-    background-color: blue;
+    background-color: #2B2B2B;
     width: 100%;
-    height: 100px;
+    height: 150px;
+    padding: 0 20px;
 }
 
 .title {
-  /* border: 2px solid red; */
-  margin:0; 
+  /* margin:0;  */
   display: inline;
   font-size: 36px;
   grid-column: 3;
-  /* justify-self: end; */
+  grid-row: 2;
 }
 
 .title:before {
@@ -64,79 +71,127 @@ main {
 
 .hamburger {
   justify-self: start;
+  grid-row: 2;
+  margin-bottom: 30px;
 }
 
 /* Card */
 .main-grid {
-  padding: 20px 10px;
+  padding:  10px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-  grid-gap: 20px;
-  justify-items: center;
-  /* align-content: center */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: 100px;
+  grid-gap: 1rem;
+  /* justify-items: stretch;
+  align-items: stretch; */
 }
 
-p {
+.main-header {
+  grid-row: 1;
+  grid-column: 1/-1;
+  justify-self: left;
+  align-self: center;
+  height: fit-content;
+  font-size: 40px;
+  font-weight: 300;
   color: black;
-}
-
-.site {
-  /* width: 90%; */
-  height:fit-content;
-  min-height: 40px;
-  background: grey;
-  /* margin:0 auto; */
-  border-radius: 5px;
 }
 
 .card {
   position: relative;
-  max-width: 350px;
-  height: 0;
-  padding-bottom: 140%;
+  /* max-width: 270px; */
+  /* height: 0;
+  padding-bottom: 140%; */
+  width: 100%;
+  aspect-ratio: 1/1;
   background-color: white;
+  box-shadow: 0px 0px 4px 1px #0000004d;
+  justify-self: stretch;
 }
 
-.img-container {
-  border: 2px solid red;
-  position: relative;
+.img-cropper {
+  height: 0;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+
+.profile-pic {
+  width: 100%;
+  filter: brightness(70%)
 }
 
 .views {
+  text-align: center;
+  margin:5%;
   position:absolute;
   top: 0;
   right:0;
+  color: rgb(255, 255, 255);
+}
 
+.view-count {
+  font-size: 35px;
+}
+
+.card-btn {
+  margin: 5%;
+  position: absolute;
+  background-image: url('assets/arrow.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 18%;
+  width:25%;
+  top: 0;
+  left:0;
+  filter: invert(100%);
+}
+
+.card-btn:hover {
+  filter: invert(91%) sepia(1%) saturate(34%) hue-rotate(314deg) brightness(94%) contrast(89%);
 }
 
 .card-info {
-  width: 90%;
-  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column; */
+  /* align-content: space-between; */
+  /* height: 10000%; */
+  padding: 15px;
 }
 
-/* .card:before {
-  content: "";
-  display: block;
-  background-color: white;
-  height: 0;
-  /* width: 0; */
-  /* padding-bottom: calc(3/16 * 100%); */
-/* } */ 
-
-
-/* .profile-pic {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} */
-.profile-pic {
-  /* position: absolute;
-  top:0; */
-  width: 100%;
+.card-date {
+  margin-top: 1%;
+  font-size: 11px;
+  /* font-weight: 100; */
+  color: rgb(143, 143, 143)
 }
 
+.card-website {
+  height:fit-content;
+  min-height: 45px;
+  width: 97%;
+  margin: 9% auto;
+  padding: 10px;
+  background: #EFEFEF;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.card-skills,
+.card-recommendations {
+  font-size: 12px;
+}
+.card-skills {
+  margin-bottom: 1%;
+}
+
+.card-skills-details {
+  margin-bottom: 5%;
+}
+
+.card-recommendations-number {
+  font-size: 28px;
+  color: #30B7FE;
+}
 
 @media screen and (max-width: 500px) {
   /*nav*/
