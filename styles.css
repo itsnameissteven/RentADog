@@ -16,7 +16,7 @@ body {
 }
 
 main {
-  background-color: #EFEFEF;
+  background-color: #e0fbfc;
   flex-grow: 1;
 }
 
@@ -29,14 +29,14 @@ p {
 
 .nav-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto auto;
   grid-template-rows: 40px auto;
   align-items: end;
   justify-items: end;
 }
 
 .navigation-bar {
-  background-color: #2B2B2B;
+  background-color: #293241;
   width: 100%;
   height: 150px;
   padding: 0 20px;
@@ -47,7 +47,6 @@ p {
   background: transparent;
   outline: none;
   border: none;
-  /* margin-left: 10px; */
 }
 
 .btn::before {
@@ -56,11 +55,10 @@ p {
   content: "";
   background-image: url(assets/iconfinder_outlined_share_4280490.png);
   background-size: 20px 20px;
-  /* background-size: contain; */
   height: 20px;
   width: 20px;
   vertical-align: middle;
-  filter: invert(54%) sepia(88%) saturate(1024%) hue-rotate(174deg) brightness(102%) contrast(102%)
+  filter: invert(55%) sepia(39%) saturate(2478%) hue-rotate(329deg) brightness(97%) contrast(93%);
 }
 
 .shares::before {
@@ -82,10 +80,9 @@ p {
 }
 
 .username {
-  /* grid-row: 1; */
   grid-column: 2;
   font-size: 13px;
-  color: #30B7FE;
+  color: #ee6c4d;
 }
 
 .username::before {
@@ -102,11 +99,10 @@ p {
   height: 20px;
   width: 20px;
   vertical-align: middle;
-  filter: invert(54%) sepia(88%) saturate(1024%) hue-rotate(174deg) brightness(102%) contrast(102%)
+  filter: invert(55%) sepia(39%) saturate(2478%) hue-rotate(329deg) brightness(97%) contrast(93%);
 }
 
 .title {
-  /* margin:0;  */
   display: inline;
   font-size: 36px;
   grid-column: 2;
@@ -134,14 +130,13 @@ p {
 }
 
 /* Card */
+
 .main-grid {
   padding:  10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   grid-template-rows: 100px;
-  grid-gap: 1rem;
-  /* justify-items: stretch;
-  align-items: stretch; */
+  grid-gap: 10px;
 }
 
 .main-header {
@@ -157,11 +152,7 @@ p {
 
 .card {
   position: relative;
-  /* max-width: 270px; */
-  /* height: 0;
-  padding-bottom: 140%; */
   width: 100%;
-  /* aspect-ratio: 1/1; */
   background-color: white;
   box-shadow: 0px 0px 4px 1px #0000004d;
   justify-self: stretch;
@@ -209,17 +200,12 @@ p {
 }
 
 .card-info {
-  /* display: flex;
-  flex-direction: column; */
-  /* align-content: space-between; */
-  /* height: 10000%; */
   padding: 15px;
 }
 
 .card-date {
   margin-top: 1%;
   font-size: 11px;
-  /* font-weight: 100; */
   color: rgb(143, 143, 143)
 }
 
@@ -248,11 +234,12 @@ p {
 
 .card-recommendations-number {
   font-size: 28px;
-  color: #30B7FE;
+  color: #ee6c4d;
 }
 
 @media screen and (max-width: 550px) {
   /*nav*/
+
   .username {
     display: none;
   } 
@@ -264,8 +251,6 @@ p {
   }
 
   .navigation-bar {
-    /* background-color: blue; */
-    /* width: 100%; */
     padding: 0;
     height: 40px;
   }
@@ -289,6 +274,11 @@ p {
     display: none;
   }
 
+  .hamburger:hover,
+  .profile:hover {
+    filter: invert(55%) sepia(39%) saturate(2478%) hue-rotate(329deg) brightness(97%) contrast(93%);
+  }
+
   .profile {
     grid-column: 3;
     background-image: url('assets/profile.svg');
@@ -296,7 +286,6 @@ p {
   
   .title {
     margin: 0;
-    /* display: inline; */
     grid-column: 2;
     grid-row: 1;
     justify-self: center;
@@ -304,21 +293,6 @@ p {
     height:fit-content;
     font-size: 20px;
   }
-
-  /* .title:before {
-    background-image: url('assets/noun_Dog_1065837.svg');
-    background-repeat: no-repeat;
-    margin-bottom: 5px;
-    padding-right: 10px;
-    background-size: 30px 30px;
-    display: inline-block;
-    font-weight: bold;
-    vertical-align: middle;
-    height:30px;
-    width:30px;
-    content: ""; 
-    filter: invert(100%)
-  } */
 
   .main-grid {
     padding: 0;
@@ -334,7 +308,6 @@ p {
     margin: 10px 0;
     padding: 0;
     display: flex;
-    /* overflow: hidden; */
   }
 
   .views {
@@ -354,28 +327,16 @@ p {
 
   .card-btn {
     margin: 1%;
-    /* position: absolute; */
-    /* background-image: url('assets/arrow.svg'); */
-    /* background-repeat: no-repeat; */
-    /* background-size: contain; */
     height: 25%;
-    /* width:25%; */
     top: 0;
     left:0;
-    /* filter: invert(100%); */
   }
   .card-info {
-    /* position: relative; */
-    /* display:inline-block; */
-    /* height: 100%; */
-    /* border: 2px solid red; */
     width: 58%;
     padding: 1%;
   }
 
   .card-website {
-    /* height:fit-content; */
-    /* height: 20px; */
     min-height: 25px;
     width: 95%;
     margin: 5% auto;
@@ -396,13 +357,11 @@ p {
     right:1.5%;
     bottom: 1%;
     font-size: 22px;
-    color: #30B7FE;
   }
 
   .card-skills {
     position: absolute;
     bottom: 10%
-    /* margin-bottom: 0%; */
   } 
 
   .card-skills-details {
@@ -418,11 +377,10 @@ p {
     padding-bottom: 0;
     display: inline-block;
     overflow: hidden;
-    /* border: 2px solid red; */
   }
 
   .profile-pic {
-    height: auto;
-    width: 100%;
+    height: 110%;
+    width: auto;
   }
 }
